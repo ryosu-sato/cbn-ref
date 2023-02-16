@@ -6,12 +6,12 @@
 - HoIce (https://github.com/hopv/hoice)
 
 ## How to install
-$ opam pin add cbn-ref git@github.com:ryosu-sato/cbn-ref.git
+`$ opam pin add cbn-ref git@github.com:ryosu-sato/cbn-ref.git`
 
 ## How to use
-$ cbn-ref <input.in>
+`$ cbn-ref <input.in>`
 
 ## Benchmark programs
 The benchmark programs used in the paper are in "benchmark" directory.
-You can reproduce the experiments by executing "exp.fish"
+You can reproduce the experiments by executing `exp.fish`
 if you have installed LiquidHaskell.
