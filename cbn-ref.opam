@@ -1,0 +1,21 @@
+opam-version: "2.0"
+name: "cbn-ref"
+synopsis: "Call-by-name refinement type checker"
+
+authors: ["Sato, Ryosuke <rsato@is.s.u-tokyo.ac.jp>"]
+maintainer: ["Sato, Ryosuke <rsato@is.s.u-tokyo.ac.jp>"]
+homepage: ["https://github.com/ryosu-sato/cbn-ref"]
+bug-reports: ["https://github.com/ryosu-sato/cbn-ref"]
+
+depends: [
+  "ocaml" {>= "4.13.0" & < "4.14.0"}
+  "dune" {>= "2.5.1"}
+  "batteries" {>= "3.4.0"}
+  "ocamlfind"
+  "ppx_deriving"
+  "ppxlib" {>= "0.26.0"}
+]
+
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]

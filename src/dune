@@ -1,0 +1,7 @@
+(executable
+ (name main)
+ (public_name cbn-ref)
+ (libraries str unix batteries compiler-libs.common)
+ (flags (:standard -w -21-32-9-52-57-58 -warn-error -a))
+ (preprocess (pps ppx_deriving.show))
+ (promote))

@@ -1,0 +1,12 @@
+let div (x:int) y = if y = 0 then assert false else x
+
+let rec collatz md n =
+  if n = 1 then
+    1
+  else if md n 2 = 0 then
+    collatz md (div n 2)
+  else
+    collatz md (3*n + 1)
+
+let main md x =
+  div x (collatz md x + 1)

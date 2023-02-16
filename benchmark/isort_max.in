@@ -1,0 +1,30 @@
+let hd (rnd:unit->int) xs =
+  if xs <= 0 then assert false else rnd ()
+
+let rec insert rnd (x:int) xs =
+  if rnd () = 0 then
+    1 + xs
+  else
+    1 + insert rnd x (xs - 1)
+
+let rec isort rnd xs =
+  if xs <= 1 then
+    xs
+  else
+    let x = rnd () in
+    let xs' = xs - 1 in
+    insert rnd x (isort rnd xs')
+
+let rec make_list n =
+  if n <= 0 then
+    0
+  else
+    1 + make_list (n-1)
+
+let max_list rnd xs =
+  hd rnd (isort rnd xs)
+
+let main rnd n =
+  let xs = make_list n in
+  let m = max_list rnd xs in
+  if n > 1 then m else 0

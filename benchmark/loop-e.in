@@ -1,0 +1,5 @@
+let rec loop (n:int) : int = loop n
+
+let main (n:int) : unit =
+  let r = loop 0 in
+  assert false

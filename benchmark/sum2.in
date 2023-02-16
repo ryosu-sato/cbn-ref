@@ -1,0 +1,7 @@
+let rec sum n a =
+  if n <= 0
+  then a
+  else n + sum (n-1) a
+
+let main x =
+  assert (x <= sum x 0)

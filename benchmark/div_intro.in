@@ -1,0 +1,13 @@
+let div (x:int) y = if y = 0 then assert false else x
+
+let rec sum f (i:int) n =
+  if i >= n then
+    0
+  else
+   f i + sum f (i+1) n
+
+let unsafe_average f n = div (sum f 0 n) n
+
+let main f n =
+  let r = unsafe_average f n in
+  if n <= 0 then 0 else r
